@@ -9,4 +9,10 @@ Spring:
     hibernate:
       ddl-auto: update
     properties:
-      hibernate.format@sql: true
+      hibernate.format_sql: true
+
+  logging:
+    level:
+      arg:
+        hibernate:
+          type: trace

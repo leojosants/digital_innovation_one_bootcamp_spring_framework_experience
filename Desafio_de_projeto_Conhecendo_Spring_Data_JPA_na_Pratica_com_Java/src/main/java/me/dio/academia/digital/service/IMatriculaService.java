@@ -15,16 +15,18 @@ public interface IMatriculaService {
 
   /**
    * Retorna uma Matrícula que está no banco de dados de acordo com seu Id.
-   * @param id - id da Matrícula que será exibida.
+   *
    * @return - Matrícula de acordo com o Id fornecido.
    */
+
   Matricula get(Long id);
 
   /**
    * Retorna todas as Matrículas que estão no banco de dados.
    * @return - uma lista com todas as Matrículas que estão salvas no DB.
    */
-  List<Matricula> getAll();
+
+  List<Matricula> getAll(String bairro);
 
   /**
    * Deleta uma Matrícula específica.
