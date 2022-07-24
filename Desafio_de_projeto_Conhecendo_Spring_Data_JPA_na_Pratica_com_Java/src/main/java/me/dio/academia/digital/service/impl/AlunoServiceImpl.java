@@ -40,7 +40,8 @@ public class AlunoServiceImpl implements IAlunoService {
 
         if(dataDeNascimento == null) {
             return repository.findAll();
-        } else {
+        }
+        else {
             LocalDate localDate = LocalDate.parse(dataDeNascimento, JavaTimeUtils.LOCAL_DATE_FORMATTER);
             return repository.findByDataDeNascimento(localDate);
         }

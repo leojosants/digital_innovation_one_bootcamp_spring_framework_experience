@@ -14,7 +14,7 @@ public interface MatriculaRepository extends JpaRepository<Matricula, Long> {
             "INNER JOIN tb_alunos a ON m.aluno_id = a.id " +
             "WHERE a.bairro = :bairro", nativeQuery = true)
         //@Query("FROM Matricula m WHERE m.aluno.bairro = :bairro ")
-    List<Matricula> findAlunosMatriculadosBairro(String bairro);
+    List<Matricula> findByAlunosMatriculadosBairro(String bairro);
 
 
 }
