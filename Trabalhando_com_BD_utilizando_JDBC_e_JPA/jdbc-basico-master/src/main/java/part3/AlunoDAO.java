@@ -1,5 +1,7 @@
 package part3;
 
+import jdk.internal.org.objectweb.asm.tree.TryCatchBlockNode;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -8,6 +10,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AlunoDAO {
+
+    List<Aluno> alunos = new ArrayList<>();
+
+    try(Connection CONN = ConnectionFactory.getConnection()) {
+
+        PreparedStatement stmt =  CONN.prepareStatement("SELECT * FROM aluno");
+
+        ResultSetrs rs = stmt.executeQuery();
+
+        while (rs.nesxt();
+
+    } catch (Exception e) {
+
+    }
+
+    return alunos;
 
 //    // 1 - Consulta
 //    public List<Aluno> list() {
