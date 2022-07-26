@@ -10,14 +10,14 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.Entity;
 import java.util.HashSet;
 import java.util.Set;
 
 @Service
-public class SecurityDataBaseService implements UserDetailsService {
+public class SecurityDatabaseService implements UserDetailsService {
 
     @Autowired
+//    @Autowired(required = false)
     private UserRepository userRepository;
 
     @Override

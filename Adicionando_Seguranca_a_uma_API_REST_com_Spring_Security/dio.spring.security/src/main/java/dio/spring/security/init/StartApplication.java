@@ -4,10 +4,11 @@ import dio.spring.security.model.User;
 import dio.spring.security.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-@Component
+@ComponentScan
 public class StartApplication implements CommandLineRunner {
 
     @Autowired

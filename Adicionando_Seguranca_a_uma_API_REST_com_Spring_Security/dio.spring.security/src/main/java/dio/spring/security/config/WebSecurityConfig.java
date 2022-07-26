@@ -16,7 +16,7 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    private SecurityDataBaseService securityService;
+    private SecurityDatabaseService securityService;
 
     @Autowired
     public void globalUserDetails(AuthenticationManagerBuilder auth) throws  Exception {
