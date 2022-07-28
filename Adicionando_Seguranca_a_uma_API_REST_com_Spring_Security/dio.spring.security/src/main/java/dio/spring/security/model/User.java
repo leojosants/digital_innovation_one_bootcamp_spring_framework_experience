@@ -21,13 +21,13 @@ public class User {
 
     @Column(length = 100, nullable = false)
     private  String password;
+
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "tab_user_roles", joinColumns = @JoinColumn(name = "user_id"))
     @Column(name = "role_id")
     private List<String> roles = new ArrayList<>();
 
     public  User() {
-
     }
 
     public User(String username) {

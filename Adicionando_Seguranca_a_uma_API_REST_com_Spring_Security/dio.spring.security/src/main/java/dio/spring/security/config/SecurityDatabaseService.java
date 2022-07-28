@@ -31,11 +31,12 @@ public class SecurityDatabaseService implements UserDetailsService {
         Set<GrantedAuthority> authorities = new HashSet<GrantedAuthority>();
 
         userEntity.getRoles().forEach(role -> {
-            authorities.add(new SimpleGrantedAuthority("ROLE" + role));
+            authorities.add(new SimpleGrantedAuthority("ROLE_" + role));
         });
 
         UserDetails user = new org.springframework.security.core.userdetails.User(userEntity.getUsername(),
-                userEntity.getPassword(), authorities);
+                userEntity.getPassword(),
+                authorities);
 
         return user;
     }

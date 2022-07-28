@@ -4,11 +4,10 @@ import dio.spring.security.model.User;
 import dio.spring.security.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-@ComponentScan
+@Component
 public class StartApplication implements CommandLineRunner {
 
     @Autowired
@@ -20,7 +19,6 @@ public class StartApplication implements CommandLineRunner {
         User user = repository.findByUsername("admin");
 
         if (user == null) {
-
             user = new User();
             user.setName("ADMIN");
             user.setUsername("admin");
@@ -33,7 +31,6 @@ public class StartApplication implements CommandLineRunner {
         user = repository.findByUsername("user");
 
         if (user == null) {
-
             user = new User();
             user.setName("USER");
             user.setUsername("user");
